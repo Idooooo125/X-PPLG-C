@@ -58,7 +58,7 @@ function openProject(projectId) {
   window.open(`kenangan${projectId}.html`)
 }
 
-// Contact form handling
+// contact dari handling
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault()
 
@@ -82,17 +82,17 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
     return
   }
 
-  // Simulate form submission (replace with your actual form handling)
-  showAlert("Thanks for your message! I'll get back to you soon!", "success")
+  // ketika kamu sudah mengirim feedback
+  showAlert("TERIMAKASIH, Saya akan mengabarimu esok", "success")
   e.target.reset()
 
-  // disini kamu harus mengetik kemanamengirimsend the data to your server
+  // disini kamu harus mengetik kemana kamu ingin mengirim data ke server kamu
   // fetch('/submit-contact', { method: 'POST', body: formData })
 })
 
-// Alert system for form feedback
+// sistem alert dari feedback
 function showAlert(message, type = "info") {
-  // Remove existing alerts
+  // menhilangkan exiting alert
   const existingAlert = document.querySelector(".alert")
   if (existingAlert) {
     existingAlert.remove()
@@ -149,7 +149,7 @@ window.addEventListener("scroll", () => {
   const scrolled = window.pageYOffset
   const hero = document.querySelector(".hero")
   if (hero && scrolled < window.innerHeight) {
-    // Only apply parallax when hero is visible and limit the effect
+    // hanya terapkan parallax ketika bagian hero terlihat dan batasi efeknya.
     const parallaxSpeed = 0.3
     const maxTransform = 100 // limit maximal transform
     const transform = Math.min(scrolled * parallaxSpeed, maxTransform)
