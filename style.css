@@ -531,7 +531,7 @@ body {
 }
 .panel-header .pembatas-container {
   display: flex;
-  gap: 160px;
+  gap: 140px;
 }
 
 .panel-title {
@@ -971,9 +971,8 @@ body {
   }
 
   .skill-badge img {
-    width: 275px;
+    width: 250px;
   }
-
 
   .projects-grid {
     grid-template-columns: 1fr;
