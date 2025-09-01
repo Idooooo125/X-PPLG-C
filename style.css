@@ -575,6 +575,14 @@ body {
   transform: scale(1.05);
 }
 
+.jarak {
+  margin-top: 25px;
+}
+
+.skill-badge img {
+ width: 400px;
+}
+
 .skill-badge i {
   font-size: 1.2rem;
 }
