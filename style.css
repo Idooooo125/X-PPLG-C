@@ -970,6 +970,11 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .skill-badge img {
+    width: 275px;
+  }
+
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
