@@ -983,7 +983,7 @@ body {
     padding-top: 1rem;
   }
 .projects-grid > * {
-    flex: 0 0 100%;              /* tiap card lebar 80% layar */
+    flex: 0 0 98%;              /* tiap card lebar 80% layar */
     scroll-snap-align: start;   /* opsional: biar snap */
   }
 
