@@ -49,7 +49,7 @@ const observer = new IntersectionObserver((entries) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elementsToAnimate = document.querySelectorAll(".comic-panel, .project-card, .section-header")
+  const elementsToAnimate = document.querySelectorAll(".comic-panel, .project-card, .section-header, .hero-image, .struktur")
   elementsToAnimate.forEach((el) => observer.observe(el))
 })
 
@@ -58,11 +58,11 @@ function openProject(projectId) {
   window.open(`kenangan${projectId}.html`)
 }
 
-// contact dari handling
+// handling contact
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault()
 
-  // Get form data
+  // ambil dari data
   const formData = new FormData(e.target)
   const name = formData.get("name")
   const email = formData.get("email")
@@ -82,17 +82,16 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
     return
   }
 
-  // ketika kamu sudah mengirim feedback
-  showAlert("TERIMAKASIH, Saya akan mengabarimu esok", "success")
+  // simulasi dari submit
+  showAlert("TERIMAKASIH, saya akan menghubungimu lagi esok", "sukses")
   e.target.reset()
 
-  // disini kamu harus mengetik kemana kamu ingin mengirim data ke server kamu
+  // disini kamu harus mengetik kemanamengirimsend the data to your server
   // fetch('/submit-contact', { method: 'POST', body: formData })
 })
 
-// sistem alert dari feedback
+// alert sistem dari feedback
 function showAlert(message, type = "info") {
-  // menhilangkan exiting alert
   const existingAlert = document.querySelector(".alert")
   if (existingAlert) {
     existingAlert.remove()
@@ -149,8 +148,8 @@ window.addEventListener("scroll", () => {
   const scrolled = window.pageYOffset
   const hero = document.querySelector(".hero")
   if (hero && scrolled < window.innerHeight) {
-    // hanya terapkan parallax ketika bagian hero terlihat dan batasi efeknya.
-    const parallaxSpeed = 0.3
+    //parallax speed sama limit
+    const parallaxSpeed = 15
     const maxTransform = 100 // limit maximal transform
     const transform = Math.min(scrolled * parallaxSpeed, maxTransform)
     hero.style.transform = `translateY(${transform}px)`
