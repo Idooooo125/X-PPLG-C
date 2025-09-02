@@ -987,7 +987,7 @@ body {
     scroll-snap-align: start;   /* opsional: biar snap */
   }
 
-  .projects-grid::-webkit-scrollbar() {
+  .projects-grid::-webkit-scrollbar {
     display: none;
   }
 
