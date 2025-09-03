@@ -83,10 +83,10 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
   }
 
   // simulasi dari submit
-  showAlert("TERIMAKASIH, saya akan menghubungimu lagi esok", "sukses")
+  showAlert("TERIMAKASIH, saya akan menghubungimu lagi esok", "succes")
   e.target.reset()
 
-  // disini kamu harus mengetik kemanamengirimsend the data to your server
+  // jadi gini le disini kamu harus mengetik kemana kamu akan mengirim data ke server kamu
   // fetch('/submit-contact', { method: 'POST', body: formData })
 })
 
@@ -149,7 +149,7 @@ window.addEventListener("scroll", () => {
   const hero = document.querySelector(".hero")
   if (hero && scrolled < window.innerHeight) {
     //parallax speed sama limit
-    const parallaxSpeed = 15
+    const parallaxSpeed = 1
     const maxTransform = 100 // limit maximal transform
     const transform = Math.min(scrolled * parallaxSpeed, maxTransform)
     hero.style.transform = `translateY(${transform}px)`
@@ -179,3 +179,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const originalText = heroTitle.textContent
   }
 })
+
