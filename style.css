@@ -1,4 +1,4 @@
-/* base style */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 :root {
-  /* Comic-book themed color palette */
+  /* warna warna */
   --background: #000000;
   --foreground: #4b5563;
   --card: rgb(255, 255, 255);
@@ -27,7 +27,7 @@
   --input: #ffffff;
   --ring: rgba(167, 141, 127, 0.5);
 
-  /* comic spesifik costum properti */
+  /* spesifik costum properti */
   --comic-panel-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   --comic-bubble-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --comic-border-width: 3px;
@@ -141,7 +141,7 @@ body {
   top: 0;
   width: 100%;
   background: var(--background);
-  border-bottom: var(--comic-border-width) solid var(--border);
+  /* border-bottom: var(--comic-border-width) solid var(--border); */
   z-index: 1000;
   box-shadow: var(--comic-panel-shadow);
 }
@@ -161,6 +161,19 @@ body {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.logo {
+  width: auto;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 403px;
+  bottom: 16px;
+  width: 115px;   /* panjang garis bawah */
+  height: 3px;   /* ketebalan */
+  background: white;
 }
 
 .logo-text span {
@@ -812,7 +825,7 @@ body {
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 1.3s ease;
 }
 
 @keyframes bounce {
@@ -868,6 +881,10 @@ body {
 
   .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .logo::after {
+    left: 49.5px;
   }
 
   .hero-content {
@@ -971,20 +988,20 @@ body {
   }
 
   .skill-badge img {
-    width: 250px;
+    width: 400px;
   }
 
  .projects-grid {
-    display: flex;              
-    gap: 1rem;                  
+    display: flex;            
+    gap: 1.4rem;                  
     overflow-x: auto;           /* ngeaktifin scroll horizontal */
     scroll-snap-type: x mandatory; /* opsional: biar snap */
     padding-bottom: 1rem; 
     padding-top: 1rem;
   }
 .projects-grid > * {
-    flex: 0 0 98%;              /* tiap card lebar 80% layar */
-    scroll-snap-align: start;   /* opsional: biar snap */
+    flex: 0 0 98%;              /* biar tiap card lebar 80% layar */
+    scroll-snap-align: center;   /* opsional: biar snap */
   }
 
   .projects-grid::-webkit-scrollbar {
@@ -1028,6 +1045,10 @@ body {
   .hero::after {
     height: 10%;
     background: linear-gradient(0deg, rgba(1, 1, 3, 1) 4%, rgb(255, 255, 255, 0) 100%);
+  }
+
+  .skill-badge img {
+    width: 260px;
   }
 
 }
